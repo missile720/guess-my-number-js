@@ -11,30 +11,56 @@
     <!-- Style CSS -->
     <link href="css/style.css" rel = "stylesheet">
 
+    <!-- JS -->
+    <script src="/main.js" defer></script>
+
     <title>Number Guesser</title>
   </head>
   <body>
     <div class="container-fluid row text-center">
-      <h1>Guess Number</h1>
-      
+      <h1>Guess the Random Number</h1>
+      <h3 id="rangeText"></h3>
     </div>
-    <div class="container-fluid row h-100 d-flex align-items-center">
-        <div class="col d-flex justify-content-center">
-          <div class="box text-center">
-            <h3>Input guess:</h3>
-            <hr>
-            <form>
-              <input type="text" class="form-control mt-2" id="inputText">
-              <br>
-              <input type="button" id="addButton" value="Submit">
-            </form>
-            <hr>
-            <h5 id = "result"></h5>
-          </div>
-          
+    <div class="container-fluid row">
+      <div class="col">
+        <h3>Numbers Guessed:<br><span id="numberGuesses"></span></h3>
+      </div>
+      <div class="col text-end">
+        <h3>Number of Guesses: <span id="wrongGuesses">0</span></h3>
+      </div>
+    </div> 
+    <div class="container-fluid row h-100 d-flex align-items-center" id="range">
+      <div class="col d-flex justify-content-center">
+        <div class="box text-center">
+          <h3>Input range:</h3>
+          <hr>
+          <form>
+            <h4 class="text-start">Min:</h4>
+            <input type="text" class="form-control mt-2" id="minText">
+            <h4 class="text-start">Max:</h4>
+            <input type="text" class="form-control mt-2" id="maxText">
+            <br>
+            <input type="button" id="rangeButton" value="Submit">
+          </form>
+          <hr>
         </div>
+      </div>
     </div>
-
+    <div class="container-fluid row h-100 d-flex align-items-center d-none" id="guess">
+      <div class="col d-flex justify-content-center">
+        <div class="box text-center">
+          <h3>Input guess:</h3>
+          <hr>
+          <form>
+            <input type="text" class="form-control mt-2" id="inputText">
+            <br>
+            <input type="button" id="guessButton" value="Submit">
+          </form>
+          <hr>
+          <h5 id = "result"></h5>
+        </div>
+      </div>
+    </div>
 
 
 
